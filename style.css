@@ -27,15 +27,14 @@ body {
     width: 90%;
     max-width: 1024px;
 }
-
+/*
 header {
     height: 118px;
     text-align: center;
     position: relative;
-    z-index: 2; /* Ensure the header (with logo) stays in front of the nav */
-    background-color: rgba(255, 255, 255, 0.9); /* Add a semi-transparent background */
-}
-
+    z-index: 2; 
+    background-color: rgba(255, 255, 255, 0.9); 
+*/
 nav {
     background-color: rgba(79, 58, 0, 0.168);
     margin: 12px auto;
