@@ -2,6 +2,7 @@ html {
     height: 100%;
     margin: 0;
 }
+
 body {
     background-color: #878787;
     background-image: url(Images/Old-Paper-2.jpg);
@@ -10,22 +11,31 @@ body {
     background-position: center;
     font-family: Arial, sans-serif;
 }
+
 .Logo-1 {
     width: 200px;
     height: auto;
     padding-top: 50px;
     display: block;
     margin: 0 auto;
+    position: relative;
+    z-index: 2; /* Ensure the logo stays in front of other elements */
 }
+
 .container {
     margin: 0 auto;
     width: 90%;
     max-width: 1024px;
 }
+
 header {
     height: 118px;
     text-align: center;
+    position: relative;
+    z-index: 2; /* Ensure the header (with logo) stays in front of the nav */
+    background-color: rgba(255, 255, 255, 0.9); /* Add a semi-transparent background */
 }
+
 nav {
     background-color: rgba(79, 58, 0, 0.168);
     margin: 12px auto;
@@ -33,10 +43,75 @@ nav {
     width: 90%;
     max-width: 800px;
     text-align: center;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative; /* Keep the nav positioned for dropdown */
+    z-index: 1; /* Keep nav behind the header */
 }
+
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 20px;
+    cursor: pointer;
+    z-index: 2; /* Keep the hamburger menu above the nav */
+    margin-right: 10px;
+}
+
+.line {
+    height: 4px;
+    background-color: #000;
+    border-radius: 2px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.line.active:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.line.active:nth-child(2) {
+    opacity: 0;
+}
+
+.line.active:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+ul.dropdown {
+    display: none;
+    list-style: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: rgba(79, 58, 0, 0.9);
+    padding: 10px 0;
+    margin: 0;
+    z-index: 1; /* Dropdown should appear above the nav */
+}
+
+ul.dropdown li {
+    text-align: center;
+}
+
+ul.dropdown li a {
+    display: block;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+ul.dropdown li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+ul.dropdown.active {
+    display: block;
+}
+
 h1 {
     font-family: 'Times New Roman', Times, serif;
-    /*@media (max-width: 768px) {
-    .container, nav {
-        width: 95%;
 }
