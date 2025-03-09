@@ -1,0 +1,42 @@
+html {
+    height: 100%;
+    margin: 0;
+}
+body {
+    background-color: #878787;
+    background-image: url(Images/Old-Paper-2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-family: Arial, sans-serif;
+}
+.Logo-1 {
+    width: 200px;
+    height: auto;
+    padding-top: 50px;
+    display: block;
+    margin: 0 auto;
+}
+.container {
+    margin: 0 auto;
+    width: 90%;
+    max-width: 1024px;
+}
+header {
+    height: 118px;
+    text-align: center;
+}
+nav {
+    background-color: rgba(79, 58, 0, 0.168);
+    margin: 12px auto;
+    height: 40px;
+    width: 90%;
+    max-width: 800px;
+    text-align: center;
+}
+h1 {
+    font-family: 'Times New Roman', Times, serif;
+    /*@media (max-width: 768px) {
+    .container, nav {
+        width: 95%;
+}
